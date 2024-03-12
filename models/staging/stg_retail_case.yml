@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: stg_customers
+    columns:
+      - name: customer_id
+        tests:
+        - unique
+        - not_null
+
+  - name: stg_transactions
+    columns:
+      - name: transaction_new_id
+        description: Attention.. Transaction new id n'est pas unique
+        tests:
+          - not_null
+
+  - name: stg_product_info
+    columns:
+      - name: prod_cat
+        tests:
+          - accepted_values:
+              values:
+                - Electronics
+                - Footwear
+                - Bags
+                - Clothing
+                - Books
+                - Home and kitchen
+
+              
+
+  
+            
+            
