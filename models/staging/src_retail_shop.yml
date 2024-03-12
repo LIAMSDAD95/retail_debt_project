@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: Retail_Case
+    database: my-project-bq-404813 
+    schema: Retail_Case 
+    tables:
+      - name: customer
+      - name: transaction
+      - name: product_category_info
+
+  
